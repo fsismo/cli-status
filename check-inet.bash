@@ -1,7 +1,7 @@
 #!/bin/bash
 source ./config.bash
 
-PING=$(ping -c 10 -q $IPTEST)
+PING=$(ping -c $PING_COUNT -q $PING_TEST)
 PING_LOST=$(echo "$PING" |grep 'packet loss' | cut -d ',' -f 3 | cut -d '%' -f 1 | xargs)
 PING_AVG=$(echo "$PING" |grep avg | cut -d '/' -f 5 | cut -d '.' -f 1)
 

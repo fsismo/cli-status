@@ -6,6 +6,7 @@
 # You should have isntalled "figlet" and the font Big-Money-nw
 # > sudo apt install figlet wget
 # > sudo wget https://raw.githubusercontent.com/xero/figlet-fonts/master/Big%20Money-nw.flf -O /usr/share/figlet/Big-Money-nw.flf 
+# > sudo wget https://raw.githubusercontent.com/xero/figlet-fonts/master/ANSI%20Shadow.flf -O /usr/share/figlet/ANSI-Shadow.flf
 #############################
 #############################
 
@@ -23,9 +24,9 @@ function CHECK_DNS {
 
 
 
-mkdir -p /var/run/Status/
+mkdir -p /var/run/status/
 
-echo $$ > /var/run/Status/Status.pid
+echo $$ > /var/run/status/status.pid
 while [ 1 ]
 do
 	if [ $(date +"%S") -le "10" ]; then
