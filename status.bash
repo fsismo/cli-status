@@ -36,7 +36,6 @@ do
 	fi	
 	
 	clear > $CONSOLE
-	echo -e "\n" > $CONSOLE
 	
 	#SHOW TIME
 	echo -e "\033[0;37m" > $CONSOLE
@@ -54,7 +53,7 @@ do
 	#PRINT DNS STATUS
 	if [ -f /dev/shm/STS-DNS ]; then
 		source /dev/shm/STS-DNS
-		echo -e "$RTN_DNS_C \n\n" > $CONSOLE
+		echo -e "$RTN_DNS_C \n" > $CONSOLE
 		FLIGET "DNS" > $CONSOLE
 		[ -n "$RTN_DNS_MSG" ] && FLIGETMSG "$RTN_DNS_MSG" > $CONSOLE		
 	fi
@@ -62,7 +61,7 @@ do
 	#PRINT INET STATUS
 	if [ -f /dev/shm/STS-INET ]; then
 		source /dev/shm/STS-INET
-		echo -e "$RTN_INET_C \n\n"  > $CONSOLE
+		echo -e "$RTN_INET_C \n"  > $CONSOLE
 		FLIGET "INET" >  $CONSOLE
 		FLIGETMSG "$RTN_INET_MSG"  > $CONSOLE
 	fi
