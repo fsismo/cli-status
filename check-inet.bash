@@ -3,7 +3,7 @@ source ./config.bash
 
 PING=$(ping -c $PING_COUNT -q $PING_TEST)
 PING_LOST=$(echo "$PING" |grep 'packet loss' | cut -d ',' -f 3 | cut -d '%' -f 1 | xargs)
-PING_AVG=$(echo "$PING" |grep avg | cut -d '/' -f 5 | cut -d '.' -f 1)
+PING_AVG=$(echo "$PING" |grep avg | cut -d '/' -f 5 | cut -d '.' -f 1 | xargs printf "%.*f\n" "0")
 
 if [ "$PING_LOST" -lt "5" ] && [ -n "$PING_LOST" ] && [ "$PING_AVG" -lt "30" ] && [ -n "$PING_AVG" ]; then
     RTN_INET_C="$OK"
