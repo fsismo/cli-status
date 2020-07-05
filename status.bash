@@ -32,6 +32,7 @@ do
 	if [ $(date +"%S") -le "10" ]; then
 		$UPATH/check-inet.bash &
 		$UPATH/check-dns.bash &
+		$UPATH/check-weather.bash &
 	fi	
 	
 	clear > $CONSOLE
@@ -40,6 +41,14 @@ do
 	#SHOW TIME
 	echo -e "\033[1;34m" > $CONSOLE
 	FLIGET $(date +"%H:%M") > $CONSOLE
+
+	#PRINT WHEATHER
+	if [ -f /dev/shm/STS-WEATHER ]; then
+		source /dev/shm/STS-WEATHER
+		FLIGETMSG "$RTN_WEATHER_CITY"  > $CONSOLE
+		FLIGET "$RTN_WEATHER_TEMP" > $CONSOLE
+		FLIGET "$RTN_WEATHER_MAIN" > $CONSOLE
+	fi
 
 	#PRINT DNS STATUS
 	if [ -f /dev/shm/STS-DNS ]; then
