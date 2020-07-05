@@ -39,14 +39,14 @@ do
 	echo -e "\n" > $CONSOLE
 	
 	#SHOW TIME
-	echo -e "\033[1;37m" > $CONSOLE
+	echo -e "\033[0;37m" > $CONSOLE
 	FLIGET $(date +"%H:%M") > $CONSOLE
 
 	#PRINT WHEATHER
 	if [ -f /dev/shm/STS-WEATHER ]; then
 		source /dev/shm/STS-WEATHER
-		FLIGETMSG "$RTN_WEATHER_CITY"  > $CONSOLE
-		echo "\n"
+		FLIGETMSG "$RTN_WEATHER_CITY" > $CONSOLE
+		echo -e "\n" > $CONSOLE
 		FLIGET "$RTN_WEATHER_TEMP" > $CONSOLE
 		FLIGET "$RTN_WEATHER_MAIN" > $CONSOLE
 	fi
