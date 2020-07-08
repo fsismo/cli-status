@@ -8,7 +8,7 @@ PING_AVG=$(echo "$PING" |grep avg | cut -d '/' -f 5 | cut -d '.' -f 1 | xargs pr
 if [ "$PING_LOST" -lt "5" ] && [ -n "$PING_LOST" ] && [ "$PING_AVG" -lt "30" ] && [ -n "$PING_AVG" ]; then
     RTN_INET_C="$OK"
 elif ([ "$PING_LOST" -lt "15" ] && [ -n "$PING_LOST" ]) && ([ "$PING_AVG" -lt "200" ] && [ -n "$PING_AVG" ] ) ; then
-    RTN_INET_C="$WARN"
+    RTN_INET_C="$WAR"
 else
     RTN_INET_C="$BAD"
 fi
