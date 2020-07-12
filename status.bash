@@ -38,7 +38,7 @@ do
 	clear > $CONSOLE
 	
 	#SHOW TIME
-	echo -e "\033[0;37m" > $CONSOLE
+	echo -e "$OWM_COLOR" > $CONSOLE
 	FLIGET $(date +"%H:%M") > $CONSOLE
 
 	#PRINT WHEATHER
@@ -65,10 +65,5 @@ do
 		FLIGET "INET" >  $CONSOLE
 		FLIGETMSG "$RTN_INET_MSG"  > $CONSOLE
 	fi
-
-	
-
-	
-
 	sleep 10
 done

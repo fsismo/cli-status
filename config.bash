@@ -12,5 +12,6 @@ CONSOLEWITH='60'
 # I'm gonna use the openweathermap.org api to get the weather data.
 
 OWM_AK=''                   #https://home.openweathermap.org/api_keys
-OWM_CITYID='3435910'                                        #https://openweathermap.org/city/3435910
-OWM_UNITS='metric'                                          # metric | imperial
+OWM_CITYID='3435910'        #https://openweathermap.org/city/3435910
+OWM_UNITS='metric'          # metric | imperial
+OWM_COLOR='\033[0;37m'
