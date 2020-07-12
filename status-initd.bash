@@ -8,6 +8,7 @@
 # Short-Description: your description here
 ### END INIT INFO
 cd /opt/status  
+source ./config.bash
 if [ "$1" != "" ]; then
 	if [ "$1" == "start" ]; then
 		echo "Starting Status Services"
@@ -22,6 +23,7 @@ if [ "$1" != "" ]; then
 	elif [ "$1" == "stop" ]; then
 		echo "Stoping Status Services"
 		kill $(cat /var/run/status/status.pid)
+		clear > $CONSOLE
 		rm /var/run/status/status.pid 
 	elif [ "$1" == "status" ]; then
 		if [ -f '/var/run/status/status.pid' ]; then
