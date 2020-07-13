@@ -35,7 +35,7 @@ do
 		$UPATH/check-weather.bash &
 	fi	
 	
-	clear > $CONSOLE
+	/usr/bin/clear > $CONSOLE
 	
 	#SHOW TIME
 	echo -e "$OWM_COLOR" > $CONSOLE

@@ -5,7 +5,7 @@
 # Required-Stop:
 # Default-Start:     2 3 4 5
 # Default-Stop:
-# Short-Description: Time and wheader on your display
+# Short-Description: Time and wheader on your displayd
 ### END INIT INFO
 cd /opt/status  
 source ./config.bash
@@ -23,7 +23,7 @@ if [ "$1" != "" ]; then
 	elif [ "$1" == "stop" ]; then
 		echo "Stoping Status Services"
 		kill $(cat /var/run/status/status.pid)
-		clear > $CONSOLE
+		/usr/bin/clear > $CONSOLE
 		rm /var/run/status/status.pid 
 	elif [ "$1" == "status" ]; then
 		if [ -f '/var/run/status/status.pid' ]; then
