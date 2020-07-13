@@ -4,7 +4,7 @@ ln -s /opt/status/status-initd.bash /etc/init.d/CliStatus
 update-rc.d CliStatus defaults
 chmod +x /etc/init.d/CliStatus
 systemctl enable CliStatus
-systemctl start CliStatus
+#systemctl start CliStatus
 cp config.ori.bash config.bash
 echo config.bash > .gitignore
 echo -e "First you should set you api key from https://home.openweathermap.org/api_keys and your DNS servers in the config.bash file"
