@@ -5,7 +5,7 @@
 # Required-Stop:
 # Default-Start:     2 3 4 5
 # Default-Stop:
-# Short-Description: Time and wheader on your displayd
+# Short-Description: Time and wheader on your display
 ### END INIT INFO
 cd /opt/status  
 source ./config.bash
