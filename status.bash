@@ -11,6 +11,7 @@
 #############################
 
 source ./config.bash
+export TERM=xterm-256color
 
 function FLIGET {
 	/usr/bin/figlet -f ANSI-Shadow -p -c -w $CONSOLEWITH $1 | awk 'NF'
