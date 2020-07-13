@@ -1,11 +1,11 @@
 #!/bin/bash
 ### BEGIN INIT INFO
-# Provides:          status-cli
+# Provides:          CliStatus
 # Required-Start:    $all
 # Required-Stop:
 # Default-Start:     2 3 4 5
 # Default-Stop:
-# Short-Description: your description here
+# Short-Description: Time and wheader on your display
 ### END INIT INFO
 cd /opt/status  
 source ./config.bash
