@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt install figlet wget jq -qq -y
+sudo apt install figlet wget jq -qqd -y
 cd /opt/status
 ln -s /opt/status/status-initd.bash /etc/init.d/CliStatus
 update-rc.d CliStatus defaults
